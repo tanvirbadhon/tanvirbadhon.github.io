@@ -1,7 +1,7 @@
 // Replace the sample entries below with your own details. Leave unavailable URLs empty.
 window.PORTFOLIO = {
   name: 'Tanvir Ahmed Badhon',
-  shortName: 'Badhon',
+  shortName: 'Tanvir Badhon',
   role: 'Student at AIUB',
   tagline: 'American International University-Bangladesh · Learning today, creating tomorrow',
   bio: "I'm Tanvir Ahmed Badhon, currently a student at American International University-Bangladesh (AIUB). I completed my Secondary School Certificate (SSC) at Govt. Kalachandpur High School and College and my Higher Secondary Certificate (HSC) at Cambrian School and College. This portfolio brings together my education and projects as I continue learning and building.",
@@ -64,4 +64,5 @@ window.PORTFOLIO = {
     { title: 'More Big Project', date: 'Coming Soon', description: 'A bigger project is on the way. Details, features, and the full reveal are coming soon.', stack: ['Coming Soon'], url: 'coming-soon.html', linkLabel: 'Coming soon ↗' }
   ]
 };
+
 
