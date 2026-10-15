@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0d1224"><meta name="description" content="Badhon's personal portfolio. Explore my skills, experience, education, and selected projects."><title>Badhon | Portfolio</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="ambient" aria-hidden="true"></div>
+<header class="wrap"><a class="brand" href="#home" data-name>Badhon</a><button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation">☰</button><nav id="navigation" aria-label="Main navigation"><a href="#about">ABOUT</a><a href="#experience">EXPERIENCE</a><a href="#skills">SKILLS</a><a href="#education">EDUCATION</a><a href="#projects">PROJECTS</a><a href="#contact">CONTACT</a></nav></header>
+<main class="wrap">
+<section id="home" class="hero"><div class="hero-copy"><h1>Hello,<br>I'm <span class="pink" data-name>Badhon</span><br><span class="mint" id="role">Your Professional Title</span></h1><p id="tagline">Your specialty · Your interests · The things you love to build</p><div class="socials" id="socials" aria-label="Social profiles"></div><div class="actions"><a class="button outline" href="#contact">CONTACT ME <span>♧</span></a><button class="button filled" id="resume">GET RESUME <span>↓</span></button></div></div>
+<div class="code-window"><div class="window-bar"><i></i><i></i><i></i></div><pre><code><span class="pink">const</span> <span id="code-person">developer</span> = {
+  name: <span class="yellow">'<span data-name>Badhon</span>'</span>,
+  journey: [<span class="yellow" id="code-skills">'Your skill', 'Your skill',
+    'Your skill', 'Your skill'</span>],
+  passionate: <span class="orange">true</span>,
+  curious: <span class="orange">true</span>,
+  openToLearning: <span class="orange">true</span>,
+  create: <span class="orange">function</span> () {
+    <span class="orange">return</span> (
+      <span class="cyan">this.</span>passion <span class="yellow">&&</span>
+      <span class="cyan">this.</span>creativity <span class="yellow">&&</span>
+      <span class="cyan">this.</span>commitment
+    );
+  }
+};</code></pre></div></section>
+<section id="about" class="about section"><div><p class="eyebrow mint">WHO AM I?</p><h2>A little about me.</h2><p class="body-copy" id="bio">This is your space to introduce yourself. Add a short bio about your background, what you do, and the problems you enjoy solving. Share your interests, your approach to work, and what you would like to build next.</p><p class="placeholder-note">Your portfolio, your story. Replace this sample content in <code>content.js</code>.</p></div><div class="portrait" id="portrait"><div class="portrait-grid"></div><span class="portrait-monogram">B.</span><span class="portrait-caption">YOUR PHOTO HERE</span><span class="portrait-corner">✦</span></div><div class="side-label">ABOUT ME</div></section>
+<section id="experience" class="section"><div class="section-title"><span>Experiences</span></div><div class="split"><div class="illustration" aria-hidden="true"><div class="orb"></div><div class="laptop"><div class="screen"><b>&lt;/&gt;</b><span></span><span></span><span></span></div><div class="keyboard"></div></div><div class="float-code">const passion = true;</div><div class="float-spark">✦</div></div><div class="timeline" id="experience-list"></div></div></section>
+<section id="skills" class="section"><div class="section-title"><span>Skills</span></div><div class="skills-grid" id="skills-list"></div></section>
+<section id="education" class="section"><div class="section-title"><span>Education</span></div><div class="split"><div class="illustration education-art" aria-hidden="true"><div class="orb"></div><div class="books"><div></div><div></div><div></div></div><div class="cap">◇</div><span class="float-spark">✦</span></div><div class="timeline" id="education-list"></div></div></section>
+<section id="projects" class="section"><div class="projects-heading"><p class="eyebrow mint">SELECTED WORK</p><h2>Highlighted <span class="pink">Projects</span></h2><p>A space for the ideas and projects ahead.</p></div><div class="projects-grid" id="projects-list"></div></section>
+<section id="contact" class="section contact"><div><p class="eyebrow mint">CONTACT WITH ME</p><h2>Let's build something<br><span class="pink">great together.</span></h2><p class="body-copy">Have a project in mind or want to say hello? Leave a message and let's start a conversation.</p><form id="contact-form"><label for="name">Your Name:</label><input id="name" name="name" autocomplete="name" required><label for="email">Your Email:</label><input id="email" type="email" name="email" autocomplete="email" required><label for="message">Your Message:</label><textarea id="message" name="message" rows="5" required></textarea><button class="button filled" type="submit">SEND MESSAGE <span>↗</span></button><p id="form-status" role="status"></p></form></div><div class="contact-details"><a id="contact-email" class="contact-line"><span>✉</span><span>Add your email in content.js</span></a><p class="contact-line"><span>⌖</span><span id="location">Your city, your country</span></p><div class="availability"><i></i> Open to a new conversation</div><div class="contact-decoration" aria-hidden="true">{ hello }</div></div></section>
+</main><footer><div class="wrap"><span>© <span id="year"></span> <span class="mint" data-name>Badhon</span>. All rights reserved.</span><a href="#home">BACK TO TOP ↑</a></div></footer><dialog id="notice"><button aria-label="Close dialog" class="dialog-close">×</button><h2 id="notice-title"></h2><p id="notice-text"></p><button class="button filled dialog-done">GOT IT</button></dialog><script src="content.js"></script><script src="app.js"></script>
+</body></html>
+
