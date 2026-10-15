@@ -27,7 +27,8 @@ for(const item of artwork){
   if(!container || !window.lottie)continue;
   container.replaceChildren();
   container.classList.add('reference-animation');
-  const player=lottie.loadAnimation({container,renderer:'svg',loop:true,autoplay:!reducedAnimation.matches,path:`assets/${item.file}`,rendererSettings:{progressiveLoad:true,preserveAspectRatio:'xMidYMid meet'}});
+  const animationData=window.PORTFOLIO_ANIMATIONS[item.file];
+  const player=lottie.loadAnimation({container,renderer:'svg',loop:true,autoplay:!reducedAnimation.matches,animationData:JSON.parse(JSON.stringify(animationData)),rendererSettings:{progressiveLoad:true,preserveAspectRatio:'xMidYMid meet'}});
   players.push(player);
   player.addEventListener('DOMLoaded',()=>{if(reducedAnimation.matches)player.goToAndStop(0,true);});
 }

@@ -58,6 +58,7 @@ async function run() {
   }
   if(animations.length!==3)throw new Error(`Expected 3 animations, found ${animations.length}`);
   for(let i=0;i<animations.length;i++)fs.writeFileSync(path.join(root,['experience.json','education.json','contact.json'][i]),JSON.stringify(animations[i]));
+  require('./bundle-animations.cjs');
   for(const file of ['hero.svg','section.svg','blur-23.svg'])await download(`${origin}/${file}`,path.join(root,file));
   await download('https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie_light.min.js',path.join(root,'lottie-light.min.js'));
   await download('https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/LICENSE.md',path.join(root,'lottie-LICENSE.md'));
