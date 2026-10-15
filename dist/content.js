@@ -4,7 +4,7 @@ window.PORTFOLIO = {
   shortName: 'Badhon',
   role: 'Student at AIUB',
   tagline: 'American International University-Bangladesh · Learning today, creating tomorrow',
-  bio: "I'm Tanvir Ahmed Badhon, currently a student at American International University-Bangladesh (AIUB). I completed my Secondary School Certificate (SSC) at Govt. Kalachandpur High School and College and my Higher Secondary Certificate (HSC) at Cambrian School and College. This portfolio is the beginning of my journey, with new experiences and projects to come.",
+  bio: "I'm Tanvir Ahmed Badhon, currently a student at American International University-Bangladesh (AIUB). I completed my Secondary School Certificate (SSC) at Govt. Kalachandpur High School and College and my Higher Secondary Certificate (HSC) at Cambrian School and College. This portfolio brings together my education and projects as I continue learning and building.",
   email: 'tanvirlab44@gmail.com',
   location: 'American International University-Bangladesh',
   photo: 'assets/profile.jpg',
@@ -57,6 +57,9 @@ window.PORTFOLIO = {
     { date: 'Completed', title: 'Secondary School Certificate (SSC)', organization: 'Govt. Kalachandpur High School and College', url: 'https://www.gkhscgulshan.edu.bd/en' }
   ],
   projects: [
-    { title: 'My first project', date: 'Upcoming', description: 'Every journey begins with an idea. My future projects and the things I build will be showcased here.', stack: ['Coming soon'], url: '', upcoming: true }
+    { title: 'Fast Food Cart', date: 'Java Desktop Application', description: 'A Java application for a fast-food ordering experience, with user registration and login, food categories, user and admin dashboards, and a payment screen.', stack: ['Java', 'Desktop Application', 'Object-Oriented Programming'], url: 'https://github.com/10badhon/Fast_Food_Cart' },
+    { title: 'Pharmacy Management System', date: 'C# Desktop Application', description: 'A pharmacy management application with separate administrator, pharmacist, and customer interfaces. Includes user and medicine management, medicine purchasing, customer profiles, and purchase history.', stack: ['C#', 'Windows Forms', 'SQL Database'], url: 'https://github.com/10badhon/C_sharp_Project' },
+    { title: 'Doraemon — Computer Graphics Game', date: 'Interactive Graphics Project', description: 'A Doraemon-themed game built with C++, OpenGL, and GLUT. Features keyboard-controlled movement and jumping, animated scenes, and audio for an interactive computer graphics experience.', stack: ['C++', 'OpenGL', 'GLUT', 'Computer Graphics'], url: 'https://github.com/10badhon/Graphics_Project/tree/main/Doraemon' }
   ]
 };
+

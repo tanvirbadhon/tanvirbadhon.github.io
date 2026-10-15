@@ -18,18 +18,6 @@ for (const cards of [skillCards.slice(0, 15), skillCards.slice(15)]) {
   row.append(track);
   skillsRoot.append(row);
 }
-const motionToggle = document.createElement('button');
-motionToggle.type = 'button';
-motionToggle.className = 'motion-toggle';
-motionToggle.textContent = 'Pause skill animation';
-motionToggle.setAttribute('aria-pressed', 'false');
-motionToggle.addEventListener('click', () => {
-  const paused = skillsRoot.classList.toggle('skills-paused');
-  motionToggle.setAttribute('aria-pressed', String(paused));
-  motionToggle.textContent = paused ? 'Play skill animation' : 'Pause skill animation';
-});
-skillsRoot.after(motionToggle);
-
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
 document.querySelectorAll('.timeline-card, .code-window').forEach(card => {
   card.classList.add('glow-surface');
