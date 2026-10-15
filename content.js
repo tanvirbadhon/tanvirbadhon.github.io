@@ -12,7 +12,7 @@ window.PORTFOLIO = {
   photo: 'assets/profile.jpg',
   resume: '', // Example: assets/resume.pdf
   socials: {
-    github: 'https://github.com/10badhon',
+    github: 'https://github.com/tanvirbadhon',
     facebook: 'https://www.facebook.com/tanvirbadhon10/',
     instagram: 'https://www.instagram.com/tanvir_badhon_10/',
     scholar: 'https://scholar.google.com/citations?user=g2oTUygAAAAJ&hl=en',
