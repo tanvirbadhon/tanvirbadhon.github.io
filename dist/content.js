@@ -5,7 +5,7 @@ window.PORTFOLIO = {
   role: 'Student at AIUB',
   tagline: 'American International University-Bangladesh · Learning today, creating tomorrow',
   bio: "I'm Tanvir Ahmed Badhon, currently a student at American International University-Bangladesh (AIUB). I completed my Secondary School Certificate (SSC) at Govt. Kalachandpur High School and College and my Higher Secondary Certificate (HSC) at Cambrian School and College. This portfolio is the beginning of my journey, with new experiences and projects to come.",
-  email: '',
+  email: 'tanvirlab44@gmail.com',
   location: 'American International University-Bangladesh',
   photo: 'assets/profile.jpg',
   resume: '', // Example: assets/resume.pdf

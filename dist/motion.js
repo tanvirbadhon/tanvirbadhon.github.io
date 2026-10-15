@@ -42,3 +42,4 @@ document.querySelectorAll('.timeline-card, .code-window').forEach(card => {
   });
   card.addEventListener('pointerleave', () => card.style.setProperty('--glow-opacity', '0'));
 });
+
