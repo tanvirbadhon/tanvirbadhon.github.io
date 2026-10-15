@@ -36,3 +36,9 @@ footer{padding:35px 0;color:#fff;font-size:13px;background:#0d1224}footer .wrap{
 @media(prefers-reduced-motion:reduce){.back-to-top,.project:before,.project:after,.timeline-card:before{transition:none}.project:hover,.project:focus-within{transform:none}}
 .project:before{background:none;filter:none;box-shadow:-13px 0 28px #06b6d480,13px 0 28px #ec489980,0 13px 26px #8b5cf680}
 .timeline-card:before{background:none;filter:none;box-shadow:-7px -5px 18px #4939f980,0 8px 22px #ec489975}
+.about{grid-template-columns:1.05fr .95fr;gap:65px}
+.portrait{width:min(100%,380px);height:auto;aspect-ratio:3/4}
+.portrait img{object-position:center center}
+@media(min-width:1500px){.portrait{width:420px}}
+@media(max-width:1000px) and (min-width:721px){.about{gap:35px}.portrait{width:100%;max-width:340px}}
+@media(max-width:720px){.about{grid-template-columns:1fr;gap:35px}.portrait{width:min(100%,340px);height:auto;aspect-ratio:3/4}}
