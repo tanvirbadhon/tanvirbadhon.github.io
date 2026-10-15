@@ -4,3 +4,5 @@
 .ambient{position:fixed;max-width:72vw} .hero>*{min-width:0}
 
 .portrait img{object-position:center 37%}
+
+.skill{min-width:0;padding:12px 8px;text-align:center}.skill span{overflow-wrap:anywhere}
