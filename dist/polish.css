@@ -42,3 +42,7 @@ footer{padding:35px 0;color:#fff;font-size:13px;background:#0d1224}footer .wrap{
 @media(min-width:1500px){.portrait{width:420px}}
 @media(max-width:1000px) and (min-width:721px){.about{gap:35px}.portrait{width:100%;max-width:340px}}
 @media(max-width:720px){.about{grid-template-columns:1fr;gap:35px}.portrait{width:min(100%,340px);height:auto;aspect-ratio:3/4}}
+.projects-heading h2{display:inline-block;background:linear-gradient(100deg,#22d3ee 0%,#60a5fa 22%,#c084fc 48%,#ec72c4 72%,#f472b6 100%);background-size:170% 100%;background-position:0% 50%;background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;font-size:clamp(30px,4vw,48px);font-weight:800;animation:project-title-flow 7s ease-in-out infinite alternate}
+.projects-heading h2 .pink{color:inherit;-webkit-text-fill-color:inherit}
+@keyframes project-title-flow{from{background-position:0% 50%}to{background-position:100% 50%}}
+@media(prefers-reduced-motion:reduce){.projects-heading h2{animation:none;background-size:100% 100%}}
