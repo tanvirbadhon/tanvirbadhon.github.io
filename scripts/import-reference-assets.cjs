@@ -3,7 +3,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const origin = 'https://www.rifatrudro.xyz';
-const root = path.resolve(__dirname, '../dist/assets');
+const root = path.resolve(__dirname, '../assets');
 const slug = value => value.toLowerCase().replace(/\+\+/g, 'plusplus').replace(/[^a-z0-9]+/g, '-');
 async function download(url, target) {
   const response = await fetch(url);
@@ -18,7 +18,7 @@ async function run() {
   const bundles = await Promise.all(sources.map(async url=>(await fetch(origin+url)).text()));
   const urls = [...new Set(bundles.flatMap(s=>[...s.matchAll(/"([^"\s]+\.svg)"/g)].map(m=>m[1])))];
   global.window = {};
-  require('../dist/content.js');
+  require('../content.js');
   const mapping = {};
   for (const skill of window.PORTFOLIO.skills) {
     const name = slug(skill.name);
