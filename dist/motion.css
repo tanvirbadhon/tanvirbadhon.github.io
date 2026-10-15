@@ -49,3 +49,13 @@ body::-webkit-scrollbar-thumb{background:#16f2b3;border-radius:8px}
 @keyframes reference-pulse{50%{opacity:.5}}
 @media(max-width:720px){.skill-group{gap:16px;padding-right:16px}.skill-group .skill{flex-basis:128px;width:128px;min-height:140px}.skill-group .skill span{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.skill-track{animation:none!important;transform:none!important}.skill-marquee{overflow-x:auto;mask-image:none}.skill-group[aria-hidden]{display:none}.motion-toggle{display:none}.portrait:hover img,.socials a:hover,.skill-group .skill:hover,.skill-group .skill:hover b,.project:hover{transform:none}.glow-surface:after{transition:none}}
+.skill b{display:flex;align-items:center;justify-content:center;height:44px}
+.skill b img{display:block;width:40px;height:40px;object-fit:contain;border-radius:5px}
+.hero{position:relative}.hero:before{content:'';position:absolute;inset:-100px -25px 0;z-index:-1;background:url('assets/hero.svg') top center/cover no-repeat;pointer-events:none}
+#experience,#education{isolation:isolate;background:url('assets/section.svg') top center/100% auto no-repeat}
+.timeline-card{background-image:url('assets/blur-23.svg');background-position:bottom;background-repeat:no-repeat;background-size:100% auto}
+.illustration.reference-animation{height:340px;max-width:440px;width:100%;margin:auto}
+.reference-animation svg{display:block;max-width:100%;max-height:100%}
+.contact-decoration.reference-animation{display:block;height:270px;width:100%;margin-top:25px;font-size:initial;color:inherit}
+@media(max-width:720px){.illustration.reference-animation{height:270px}.contact-decoration.reference-animation{height:220px;max-width:300px;margin:25px auto}.skill b img{width:32px;height:32px}}
+@media(max-width:720px){.hero:before{left:0;right:0}}

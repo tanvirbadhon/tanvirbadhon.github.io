@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect x="15" y="30" width="98" height="50" fill="#9B59B6" rx="8"/>
+  <text x="25" y="55" fill="white" font-size="12" font-family="Arial">Hello World</text>
+  <line x1="25" y1="65" x2="103" y2="65" stroke="white" stroke-width="1" stroke-dasharray="3,3"/>
+  <circle cx="50" cy="85" r="8" fill="#E74C3C"/>
+  <circle cx="70" cy="85" r="8" fill="#3498DB"/>
+  <circle cx="90" cy="85" r="8" fill="#2ECC71"/>
+</svg>
