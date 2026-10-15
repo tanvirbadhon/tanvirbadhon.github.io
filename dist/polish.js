@@ -32,6 +32,11 @@ if(window.PORTFOLIO.secondaryEmail){
 }
 const contactArtwork=document.querySelector('.contact-decoration');
 document.querySelector('.contact-details').prepend(contactArtwork);
+const contactForm=document.querySelector('#contact-form');
+const contactIntro=document.querySelector('#contact > div:first-child > .body-copy');
+contactIntro.classList.add('contact-intro');
+contactForm.prepend(contactIntro);
+document.querySelector('#message').rows=4;
 const footer=document.querySelector('footer .wrap');
 footer.querySelector('a').remove();
 const footerLinks=document.createElement('div');footerLinks.className='footer-nav';footerLinks.setAttribute('role','navigation');footerLinks.setAttribute('aria-label','Footer navigation');
