@@ -9,7 +9,13 @@ window.PORTFOLIO = {
   location: 'American International University-Bangladesh',
   photo: 'assets/profile.jpg',
   resume: '', // Example: assets/resume.pdf
-  socials: { github: '', linkedin: '', facebook: '' },
+  socials: {
+    github: 'https://github.com/10badhon',
+    facebook: 'https://www.facebook.com/tanvirbadhon10/',
+    instagram: 'https://www.instagram.com/tanvir_badhon_10/',
+    scholar: 'https://scholar.google.com/citations?user=g2oTUygAAAAJ&hl=en',
+    orcid: 'https://orcid.org/0009-0002-4175-9067'
+  },
   experience: [
     { date: 'Upcoming', title: 'My professional journey starts here', organization: 'Future experience, internships, and opportunities will appear here.' }
   ],
