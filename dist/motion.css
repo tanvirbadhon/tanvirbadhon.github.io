@@ -1,0 +1,51 @@
+/* Motion and surface treatments matched to the supplied reference portfolio. */
+:root{--bg:#0d1224;--panel:#101123}
+body{scrollbar-color:#16f2b3 #292443;scrollbar-width:thin}
+body::-webkit-scrollbar{width:8px;height:8px}
+body::-webkit-scrollbar-track{background:#292443;border-radius:8px}
+body::-webkit-scrollbar-thumb{background:#16f2b3;border-radius:8px}
+.socials a{color:#fff;transition:transform .3s,color .3s}
+.socials a:hover,.socials a:focus-visible{color:#ec4899;transform:scale(1.25)}
+.button{transition:gap .2s ease-out,background .3s,box-shadow .3s;gap:8px}
+.button:hover{transform:none;gap:16px}
+.filled{background:linear-gradient(90deg,#7c3aed,#ec4899)}
+.filled:hover{background:linear-gradient(90deg,#ec4899,#7c3aed)}
+.outline{background:linear-gradient(var(--bg),var(--bg)) padding-box,linear-gradient(90deg,#7c3aed,#ec4899) border-box;border:1px solid transparent}
+.outline:hover{background:linear-gradient(var(--bg),var(--bg)) padding-box,linear-gradient(90deg,#ec4899,#7c3aed) border-box}
+.portrait{transform:none;border-radius:8px;background:transparent;overflow:hidden}
+.portrait:hover{transform:none}
+.portrait img{transition:transform 1s;cursor:pointer}
+.portrait:hover img{transform:scale(1.1)}
+.timeline-card{position:relative;isolation:isolate;border:1px solid #2a2e5a;border-radius:12px;background:#101123;transition:border-color .3s}
+.timeline-card:hover{transform:none;border-color:transparent}
+.timeline-icon{transition:transform .3s}
+.timeline-card:hover .timeline-icon{transform:scale(1.25)}
+.glow-surface{--glow-angle:0deg;--glow-opacity:0;position:relative}
+.glow-surface:after{content:'';position:absolute;inset:-1px;pointer-events:none;border-radius:inherit;padding:2px;opacity:var(--glow-opacity);background:conic-gradient(from var(--glow-angle),transparent 0deg,#f626af 35deg,#8228ec 65deg,#fafafa 85deg,transparent 110deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;filter:drop-shadow(0 0 5px #b63be2);transition:opacity .6s}
+.glow-surface:focus-within{--glow-opacity:1}
+#skills-list.skills-grid{display:block;position:relative;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent);padding:12px 0 20px}
+.skill-marquee{overflow:hidden;padding:12px 0}
+.skill-track{display:flex;width:max-content;animation:skills-scroll 55s linear infinite}
+.skill-marquee:nth-child(2) .skill-track{animation-direction:reverse;animation-duration:58s}
+.skill-group{display:flex;gap:24px;padding-right:24px;flex-shrink:0}
+.skill-group .skill{flex:0 0 140px;width:140px;min-height:150px;background:#11152c;border:1px solid #1f223c;border-radius:8px;transition:transform .5s,border-color .5s,box-shadow .5s}
+.skill-group .skill:hover{transform:scale(1.1);border-color:#8b5cf6;box-shadow:0 0 22px #7c3aed20}
+.skill-group .skill b{font-size:40px;transition:transform .5s}
+.skill-group .skill:hover b{transform:scale(1.12)}
+.skill-group .skill span{font-size:15px}
+.skill-marquee:hover .skill-track,.skill-marquee:focus-within .skill-track,.skills-paused .skill-track{animation-play-state:paused}
+.motion-toggle{display:block;margin:12px auto 0;background:#1b1440;border:1px solid #39215e;border-radius:20px;color:#c6bedb;font:inherit;font-size:11px;padding:5px 15px;cursor:pointer}
+.project{background:linear-gradient(135deg,#0f0f1e,#0a0d2a);border:1px solid #1f2937;border-radius:16px;transition:transform .5s,border-color .3s}
+.project:hover{transform:translateY(-8px);border-color:#06b6d44d}
+.project:hover h3{background:linear-gradient(90deg,#22d3ee,#c084fc);background-clip:text;color:transparent}
+.project-bar{border-color:#1f2937}
+.project-bar>span:first-child:before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:#06b6d4;margin-right:9px;animation:reference-pulse 2s cubic-bezier(.4,0,.6,1) infinite}
+.tags span{color:#67e8f9;background:#06b6d40d;border:1px solid #06b6d433;border-radius:8px;padding:5px 11px;transition:border-color .3s}
+.project:hover .tags span{border-color:#06b6d466}
+.project-action{color:#67e8f9}
+#projects:after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 20% 30%,#06b6d40d,transparent 45%),radial-gradient(ellipse at 80% 70%,#a855f70d,transparent 45%);animation:reference-pulse 4s cubic-bezier(.4,0,.6,1) infinite}
+.availability i{animation:reference-pulse 2s cubic-bezier(.4,0,.6,1) infinite}
+@keyframes skills-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes reference-pulse{50%{opacity:.5}}
+@media(max-width:720px){.skill-group{gap:16px;padding-right:16px}.skill-group .skill{flex-basis:128px;width:128px;min-height:140px}.skill-group .skill span{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.skill-track{animation:none!important;transform:none!important}.skill-marquee{overflow-x:auto;mask-image:none}.skill-group[aria-hidden]{display:none}.motion-toggle{display:none}.portrait:hover img,.socials a:hover,.skill-group .skill:hover,.skill-group .skill:hover b,.project:hover{transform:none}.glow-surface:after{transition:none}}
