@@ -67,3 +67,72 @@ footer{padding:35px 0;color:#fff;font-size:13px;background:#0d1224}footer .wrap{
   .hero:before{inset:-120px -25px 0;background-size:100% 100%}
   footer .wrap{max-width:1820px}
 }
+/* Consistent scale across all sections on full-size desktop displays. */
+@media(min-width:1024px){
+  .section{padding-top:88px;padding-bottom:88px}
+  .section-title{margin-bottom:65px}
+  .section-title>span{font-size:24px;padding:9px 26px}
+  .section-title:before,.section-title:after{width:112px}
+  .about{gap:64px;grid-template-columns:1fr 1fr;padding-top:85px;padding-bottom:100px}
+  .about .eyebrow{font-size:22px;margin-bottom:22px}
+  .about h2{font-size:36px;margin-bottom:27px}
+  .about .body-copy{font-size:20px;line-height:1.85;max-width:820px}
+  .placeholder-note{font-size:15px;margin-top:28px}
+  .side-label{font-size:20px;letter-spacing:2px;padding:18px 11px;right:-38px;border-radius:6px}
+  .split{gap:64px;align-items:center}
+  .illustration.reference-animation{max-width:740px;height:clamp(400px,30vw,570px)}
+  #education .illustration.reference-animation{max-width:640px;height:clamp(400px,33vw,630px)}
+  .timeline{gap:26px}
+  .timeline-card{padding:27px 28px}
+  .timeline-card .date{font-size:16px;margin-bottom:22px}
+  .timeline-row{gap:30px;padding:5px 0 10px}
+  .timeline-icon svg{width:44px;height:44px}
+  .timeline-card h3{font-size:22px;line-height:1.45;margin-bottom:10px}
+  .timeline-card p:last-child{font-size:18px;line-height:1.65}
+  .skill-marquee{padding:18px 0}
+  .skill-group{gap:32px;padding-right:32px}
+  .skill-group .skill{width:168px;flex-basis:168px;min-height:180px;padding:24px 16px;gap:16px}
+  .skill-group .skill b{height:50px}
+  .skill-group .skill b img{width:48px;height:48px}
+  .skill-group .skill span{font-size:18px;line-height:1.55}
+  .skill-group .skill b{font-size:44px}
+  .projects-heading{margin-bottom:54px}
+  .projects-heading .eyebrow{font-size:20px}
+  .projects-heading h2{font-size:clamp(42px,3vw,58px)}
+  .projects-heading>p:last-child{font-size:18px;line-height:1.7}
+  .projects-grid{gap:36px}
+  .project-bar{padding:34px 36px 15px;min-height:112px}
+  .project-code-icon{height:62px;width:62px;border-radius:14px}
+  .project-code-icon svg{width:31px;height:31px}
+  .project-number{font-size:14px}
+  .project-body{padding:20px 36px 34px}
+  .project h3{font-size:30px;line-height:1.4;margin-bottom:19px}
+  .project p{font-size:18px;line-height:1.75}
+  .project-date{font-size:14px!important;gap:12px}
+  .tech-label{font-size:13px;margin-top:27px;gap:11px}
+  .tags{gap:10px;margin-top:14px;margin-bottom:30px}
+  .tags span{font-size:14px;padding:7px 12px;gap:9px}
+  .tags svg,.tags img{width:18px;height:18px}
+  .project-footer{margin-top:32px;padding-top:25px}
+  .project-role{font-size:13px;padding:7px 11px}
+  .project-action{font-size:16px;padding:11px 18px}
+  .contact{gap:80px;padding-top:100px;padding-bottom:110px}
+  .contact .eyebrow{font-size:22px}
+  .contact h2{font-size:40px}
+  .contact .body-copy{font-size:18px;line-height:1.85}
+  form{padding:30px;margin-top:30px}
+  label{font-size:16px;margin-bottom:9px}
+  input,textarea{font-size:17px;padding:12px 15px;margin-bottom:22px}
+  form .button{font-size:14px;padding:14px 30px}
+  .contact-line{font-size:22px;gap:18px;margin-bottom:30px}
+  .contact-line>span:first-child{height:50px;width:50px}
+  .contact-line svg{width:26px;height:26px}
+  .contact-decoration.reference-animation{max-width:340px;height:300px;margin-bottom:36px}
+  .availability{font-size:15px;gap:12px}
+  footer{font-size:16px;padding-top:42px;padding-bottom:42px}
+  .footer-nav{gap:32px}
+  .footer-nav a{font-size:16px}
+}
+@media(min-width:1600px){.section{padding-top:100px;padding-bottom:100px}.about .body-copy{font-size:21px}.timeline-card{padding:30px 32px}.portrait{width:440px}.contact-decoration.reference-animation{height:330px;max-width:370px}}
+@media(min-width:1024px) and (max-width:1279px){.about .body-copy{font-size:18px}.project h3{font-size:25px}.project p{font-size:16px}.timeline-card h3{font-size:20px}.timeline-card p:last-child{font-size:16px}.contact-line{font-size:18px}.contact{gap:45px}.project-body{padding-left:26px;padding-right:26px}.project-bar{padding-left:26px;padding-right:26px}}
+@media(max-width:720px){.body-copy{font-size:16px}.placeholder-note{font-size:13px}.timeline-card h3{font-size:17px}.timeline-card p:last-child{font-size:14px}.project p{font-size:15px}.project-date{font-size:12px!important}.tags span{font-size:12px}.skill-group .skill{width:140px;flex-basis:140px;min-height:150px}.skill-group .skill span{font-size:14px}.contact .body-copy{font-size:16px}label{font-size:14px}}
