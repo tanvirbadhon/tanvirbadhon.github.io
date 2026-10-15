@@ -53,7 +53,7 @@ window.PORTFOLIO = {
     { name: 'Pandas', icon: 'pd', color: '#b294e8' }
   ],
   education: [
-    { date: 'Currently studying', title: 'University Student', organization: 'American International University-Bangladesh (AIUB)', url: 'https://www.aiub.edu/' },
+    { date: 'Currently studying', title: 'Bachelor of Science in Computer Science & Engineering (BSc in CSE)', organization: 'American International University-Bangladesh (AIUB)', url: 'https://www.aiub.edu/' },
     { date: 'Completed', title: 'Higher Secondary Certificate (HSC)', organization: 'Cambrian School and College', url: 'https://www.cambrian.edu.bd/' },
     { date: 'Completed', title: 'Secondary School Certificate (SSC)', organization: 'Govt. Kalachandpur High School and College', url: 'https://www.gkhscgulshan.edu.bd/en' }
   ],
