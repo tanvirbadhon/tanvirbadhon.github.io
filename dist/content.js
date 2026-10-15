@@ -59,7 +59,8 @@ window.PORTFOLIO = {
   projects: [
     { title: 'Fast Food Cart', date: 'Java Desktop Application', description: 'A Java application for a fast-food ordering experience, with user registration and login, food categories, user and admin dashboards, and a payment screen.', stack: ['Java', 'Desktop Application', 'Object-Oriented Programming'], url: 'https://github.com/10badhon/Fast_Food_Cart' },
     { title: 'Pharmacy Management System', date: 'C# Desktop Application', description: 'A pharmacy management application with separate administrator, pharmacist, and customer interfaces. Includes user and medicine management, medicine purchasing, customer profiles, and purchase history.', stack: ['C#', 'Windows Forms', 'SQL Database'], url: 'https://github.com/10badhon/C_sharp_Project' },
-    { title: 'Doraemon — Computer Graphics Game', date: 'Interactive Graphics Project', description: 'A Doraemon-themed game built with C++, OpenGL, and GLUT. Features keyboard-controlled movement and jumping, animated scenes, and audio for an interactive computer graphics experience.', stack: ['C++', 'OpenGL', 'GLUT', 'Computer Graphics'], url: 'https://github.com/10badhon/Graphics_Project/tree/main/Doraemon' }
+    { title: 'Doraemon — Computer Graphics Game', date: 'Interactive Graphics Project', description: 'A Doraemon-themed game built with C++, OpenGL, and GLUT. Features keyboard-controlled movement and jumping, animated scenes, and audio for an interactive computer graphics experience.', stack: ['C++', 'OpenGL', 'GLUT', 'Computer Graphics'], url: 'https://github.com/10badhon/Graphics_Project/tree/main/Doraemon' },
+    { title: 'More Big Project', date: 'Coming Soon', description: 'A bigger project is on the way. Details, features, and the full reveal are coming soon.', stack: ['Coming Soon'], url: 'coming-soon.html', linkLabel: 'Coming soon ↗' }
   ]
 };
 
