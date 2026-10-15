@@ -1,0 +1,4 @@
+/* Preferred desktop presentation, without changing the browser's zoom setting. */
+@media (min-width: 1024px) {
+  html { zoom: 0.8; }
+}
