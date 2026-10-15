@@ -6,18 +6,15 @@
 <header class="wrap"><a class="brand" href="#home" data-name>Badhon</a><button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation">☰</button><nav id="navigation" aria-label="Main navigation"><a href="#about">ABOUT</a><a href="#experience">EXPERIENCE</a><a href="#skills">SKILLS</a><a href="#education">EDUCATION</a><a href="#projects">PROJECTS</a><a href="#contact">CONTACT</a></nav></header>
 <main class="wrap">
 <section id="home" class="hero"><div class="hero-copy"><h1>Hello,<br>I'm <span class="pink" data-name>Badhon</span><br><span class="mint" id="role">Your Professional Title</span></h1><p id="tagline">Your specialty · Your interests · The things you love to build</p><div class="socials" id="socials" aria-label="Social profiles"></div><div class="actions"><a class="button outline" href="#contact">CONTACT ME <span>♧</span></a><button class="button filled" id="resume">GET RESUME <span>↓</span></button></div></div>
-<div class="code-window"><div class="window-bar"><i></i><i></i><i></i></div><pre><code><span class="pink">const</span> <span id="code-person">developer</span> = {
+<div class="code-window"><div class="window-bar"><i></i><i></i><i></i></div><pre><code><span class="pink">const</span> <span id="code-person">researcher</span> = {
   name: <span class="yellow">'<span data-name>Badhon</span>'</span>,
-  journey: [<span class="yellow" id="code-skills">'Your skill', 'Your skill',
-    'Your skill', 'Your skill'</span>],
-  passionate: <span class="orange">true</span>,
-  curious: <span class="orange">true</span>,
-  openToLearning: <span class="orange">true</span>,
-  create: <span class="orange">function</span> () {
+  researchInterests: [<span class="yellow" id="code-skills">'Blockchain Technology', 'Machine Learning (ML)', 'Information Systems', 'Artificial Intelligence', 'Deep Learning', 'Internet of Things (IoT)', 'Renewable Energy'</span>],
+  currentPosition: <span class="yellow">'Student'</span>,
+  <span class="mint">availableFor:</span> <span class="orange">function</span>() {
     <span class="orange">return</span> (
-      <span class="cyan">this.</span>passion <span class="yellow">&&</span>
-      <span class="cyan">this.</span>creativity <span class="yellow">&&</span>
-      <span class="cyan">this.</span>commitment
+      <span class="cyan">this.</span>research <span class="yellow">&&</span>
+      <span class="cyan">this.</span>collaboration <span class="yellow">&&</span>
+      <span class="cyan">this.</span>publications.length <span class="yellow">&gt;=</span> <span class="orange">10</span>
     );
   }
 };</code></pre></div></section>

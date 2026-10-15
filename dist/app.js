@@ -10,8 +10,8 @@ $('#bio').textContent = p.bio;
 $('#location').textContent = p.location;
 $('#year').textContent = new Date().getFullYear();
 document.title = `${p.name} | Portfolio`;
-$('#code-skills').textContent = "'Learning', 'Exploring', 'Growing'";
-$('#code-person').textContent = 'student';
+$('#code-skills').textContent = p.researchInterests.map(interest => `'${interest}'`).join(', ');
+$('#code-person').textContent = 'researcher';
 $('.placeholder-note').textContent = 'Learning today. Building my future, one step at a time.';
 $('.portrait-monogram').textContent = p.name.charAt(0) + '.';
 if (p.photo && safeURL(p.photo)) { const img = document.createElement('img'); img.src = p.photo; img.alt = p.name; $('#portrait').replaceChildren(img); }

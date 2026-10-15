@@ -2,8 +2,9 @@
 window.PORTFOLIO = {
   name: 'Tanvir Ahmed Badhon',
   shortName: 'Tanvir Badhon',
-  role: 'Student at AIUB',
-  tagline: 'American International University-Bangladesh · Learning today, creating tomorrow',
+  role: 'Student & Researcher',
+  tagline: 'AIUB | Blockchain & Machine Learning Developer | Information Systems | Deep Learning | IoT | Renewable Energy',
+  researchInterests: ['Blockchain Technology', 'Machine Learning (ML)', 'Information Systems', 'Artificial Intelligence', 'Deep Learning', 'Internet of Things (IoT)', 'Renewable Energy'],
   bio: "I'm Tanvir Ahmed Badhon, currently a student at American International University-Bangladesh (AIUB). I completed my Secondary School Certificate (SSC) at Govt. Kalachandpur High School and College and my Higher Secondary Certificate (HSC) at Cambrian School and College. This portfolio brings together my education and projects as I continue learning and building.",
   email: 'tanvirlab44@gmail.com',
   secondaryEmail: '23-53731-3@student.aiub.edu',
