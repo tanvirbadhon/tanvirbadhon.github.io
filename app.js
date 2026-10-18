@@ -37,8 +37,57 @@ $('#resume').addEventListener('click',()=>{if(p.resume && safeURL(p.resume)) { c
 $('.menu-toggle').addEventListener('click',()=>{const open=$('#navigation').classList.toggle('open');$('.menu-toggle').setAttribute('aria-expanded',String(open));});
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{$('#navigation').classList.remove('open');$('.menu-toggle').setAttribute('aria-expanded','false');}));
 const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('active',a.hash===`#${entry.target.id}`));}});},{rootMargin:'-20% 0px -60% 0px'});document.querySelectorAll('main section[id]').forEach(s=>observer.observe(s));
-$('#contact-form').addEventListener('submit',e=>{e.preventDefault();if(!p.email){$('#form-status').textContent='Add your contact email in content.js to enable sending. No message has been sent.';return;}const data=new FormData(e.currentTarget);location.href=`mailto:${encodeURIComponent(p.email)}?subject=${encodeURIComponent('Portfolio inquiry from '+data.get('name'))}&body=${encodeURIComponent(data.get('message')+'\n\nFrom: '+data.get('name')+'\nEmail: '+data.get('email'))}`;$('#form-status').textContent='Your email app will open with this message. Send it there to complete your inquiry.';});
 $('.dialog-close').addEventListener('click',()=>$('#notice').close());$('.dialog-done').addEventListener('click',()=>$('#notice').close());
 
 
 
+// A local, fictional terminal sequence; it never reads visitor information.
+(() => {
+ const panel=document.querySelector('.code-window');
+ if(!panel)return;
+ panel.tabIndex=0;
+ panel.setAttribute('aria-label','Researcher code. Hover or focus for a simulated terminal animation.');
+ const terminal=document.createElement('div');
+ terminal.className='terminal-simulation';
+ terminal.setAttribute('aria-hidden','true');
+ const title=document.createElement('div');title.className='terminal-simulation-title';title.textContent='SECURE TERMINAL // VISUAL SIMULATION';
+ const output=document.createElement('div');output.className='terminal-simulation-output';
+ const note=document.createElement('div');note.className='terminal-simulation-note';note.textContent='DEMO ONLY · No personal information accessed';
+ terminal.append(title,output,note);panel.append(terminal);
+ const lines=['> Initializing secure connection…','> Accessing your information… [SIMULATED]','[OK] Sandbox environment ready','> executing portfolio_protocol.js','const visitor = { identity: "anonymous" };','for (const skill of researcher.skills) {','  compile(skill); // ████████████ 100%','}','[OK] Research modules loaded','[OK] Collaboration channel available','> ACCESS GRANTED — welcome to my portfolio.'];
+ let timer=null,active=false;
+ function stop(){clearTimeout(timer);timer=null;active=false;panel.classList.remove('terminal-active');output.replaceChildren();}
+ function start(){if(active)return;active=true;panel.classList.add('terminal-active');output.replaceChildren();let index=0;
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function next(){if(!active)return;const row=document.createElement('div');row.textContent=lines[index++];output.append(row);output.scrollTop=output.scrollHeight;if(index<lines.length)timer=setTimeout(next,260);}
+  if(reduced){for(const line of lines){const row=document.createElement('div');row.textContent=line;output.append(row);}}else next();
+ }
+ panel.addEventListener('pointerenter',event=>{if(event.pointerType==='mouse')start();});
+ panel.addEventListener('pointerleave',()=>{if(!panel.matches(':focus-within'))stop();});
+ panel.addEventListener('focusin',start);
+ panel.addEventListener('focusout',()=>{if(!panel.matches(':hover'))stop();});
+ panel.addEventListener('keydown',event=>{if(event.key==='Escape')stop();});
+})();
+
+// Playful local-only report button: no report is submitted.
+(()=>{const button=document.querySelector('.report-runaway'),arena=document.querySelector('.report-arena');if(!button)return;let step=0;
+ const dodge=()=>{const maxX=Math.max(0,arena.clientWidth-button.offsetWidth),maxY=Math.max(0,arena.clientHeight-button.offsetHeight);const currentX=button.offsetLeft,currentY=button.offsetTop;const positions=[[1,1],[0,.2],[.7,0],[.15,1],[1,.35],[.4,.55]];let target;
+  if(step===0)target=[maxX,maxY];
+  else {const candidates=positions.map(([x,y])=>[Math.round(maxX*x),Math.round(maxY*y)]).filter(([x,y])=>Math.hypot(x-currentX,y-currentY)>=Math.max(44,Math.min(120,maxX*.3)));target=candidates.length?candidates[step%candidates.length]:[currentX<maxX/2?maxX:0,currentY<maxY/2?maxY:0];}
+  step++;button.style.left=target[0]+'px';button.style.top=target[1]+'px';};
+ button.addEventListener('pointerenter',dodge);button.addEventListener('pointerdown',event=>{event.preventDefault();dodge();});button.addEventListener('focus',dodge);button.addEventListener('click',event=>{event.preventDefault();dodge();});
+})();
+// Browser-local theme preference; storage may be unavailable in private/file mode.
+(() => {
+ const button=document.createElement('button');button.type='button';button.className='theme-toggle';
+ document.body.append(button);
+ const apply=light=>{document.documentElement.dataset.theme=light?'light':'dark';button.innerHTML='<span class="theme-symbol" aria-hidden="true">'+(light?'☾':'☀')+'</span><span class="theme-label">'+(light?'Dark theme':'Light theme')+'</span>';button.title=light?'Switch to dark theme':'Switch to light theme';button.setAttribute('aria-label',light?'Switch to dark theme':'Switch to light theme');button.setAttribute('aria-pressed',String(light));document.querySelector('meta[name="theme-color"]')?.setAttribute('content',light?'#f6f3ec':'#0d1224');};
+ let saved='dark';try{saved=localStorage.getItem('portfolio-theme')||'dark';}catch{}
+ apply(saved==='light');button.addEventListener('click',()=>{const light=document.documentElement.dataset.theme!=='light';apply(light);try{localStorage.setItem('portfolio-theme',light?'light':'dark');}catch{}});
+})();
+
+// Yaku-inspired staggered letter rotation for the header name.
+(()=>{const brand=document.querySelector('header .brand');if(!brand)return;const name=brand.textContent.trim();brand.setAttribute('aria-label',name+' — home');let index=0;brand.innerHTML='<span aria-hidden="true">'+name.split(' ').map(word=>'<span class="brand-word">'+[...word].map(letter=>'<span class="brand-letter" style="--letter:'+index+++'">'+letter+'</span>').join('')+'</span>').join(' ')+'</span>';brand.classList.add('brand-yaku');})();
+
+// Align every character's background to one shared wordmark gradient.
+(()=>{const brand=document.querySelector('header .brand-yaku');if(!brand)return;const align=()=>{const box=brand.getBoundingClientRect();brand.querySelectorAll('.brand-letter').forEach(letter=>{const rect=letter.getBoundingClientRect();letter.style.setProperty('--brand-gradient-width',box.width+'px');letter.style.setProperty('--brand-gradient-offset',(rect.left-box.left)+'px');});};if(document.fonts)document.fonts.ready.then(align);else align();new ResizeObserver(align).observe(brand);})();

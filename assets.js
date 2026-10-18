@@ -28,7 +28,26 @@ for(const item of artwork){
   container.replaceChildren();
   container.classList.add('reference-animation');
   const animationData=window.PORTFOLIO_ANIMATIONS[item.file];
-  const player=lottie.loadAnimation({container,renderer:'svg',loop:true,autoplay:!reducedAnimation.matches,animationData:JSON.parse(JSON.stringify(animationData)),rendererSettings:{progressiveLoad:true,preserveAspectRatio:'xMidYMid meet'}});
+  const makeData=()=>{
+    const data=JSON.parse(JSON.stringify(animationData));
+    if(item.file==='experience.json' && document.documentElement.dataset.theme==='light'){
+      const recolor=node=>{if(!node||typeof node!=='object')return;
+        if((node.ty==='fl'||node.ty==='st')&&Array.isArray(node.c?.k)&&typeof node.c.k[0]==='number'){
+          const [r,g,b,a=1]=node.c.k;const light=.2126*r+.7152*g+.0722*b;
+          if(Math.max(r,g,b)-Math.min(r,g,b)>.08){
+            const base=r>b*1.1?[.65,.52,.32]:[.16,.24,.34];
+            const tint=Math.min(.8,light*.7);node.c.k=[...base.map(v=>v+(1-v)*tint),a];
+          }
+        }
+        if((node.ty==='gf'||node.ty==='gs')&&Array.isArray(node.g?.k?.k)&&typeof node.g.k.k[0]==='number'){
+          const stops=node.g.k.k;for(let i=0;i<(node.g.p||0)*4;i+=4){const light=.2126*stops[i+1]+.7152*stops[i+2]+.0722*stops[i+3];const base=stops[i+1]>stops[i+3]*1.1?[.65,.52,.32]:[.16,.24,.34];base.forEach((v,j)=>stops[i+j+1]=v+(1-v)*Math.min(.8,light*.7));}
+        }
+        Object.values(node).forEach(value=>{if(typeof value==='object')recolor(value);});
+      };recolor(data);
+    }return data;
+  };
+  let player=lottie.loadAnimation({container,renderer:'svg',loop:true,autoplay:!reducedAnimation.matches,animationData:makeData(),rendererSettings:{progressiveLoad:true,preserveAspectRatio:'xMidYMid meet'}});
+  if(item.file==='experience.json')new MutationObserver(()=>{const index=players.indexOf(player);player.destroy();player=lottie.loadAnimation({container,renderer:'svg',loop:true,autoplay:!reducedAnimation.matches,animationData:makeData(),rendererSettings:{preserveAspectRatio:'xMidYMid meet'}});if(index>=0)players[index]=player;}).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
   players.push(player);
   player.addEventListener('DOMLoaded',()=>{if(reducedAnimation.matches)player.goToAndStop(0,true);});
 }

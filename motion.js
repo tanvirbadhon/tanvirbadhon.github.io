@@ -31,3 +31,6 @@ document.querySelectorAll('.timeline-card, .code-window').forEach(card => {
   card.addEventListener('pointerleave', () => card.style.setProperty('--glow-opacity', '0'));
 });
 
+
+document.querySelectorAll('.skill span').forEach(label=>{if(label.textContent.trim()==='PostgreSQL')label.classList.add('single-line-skill');});
+

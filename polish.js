@@ -31,17 +31,17 @@ if(window.PORTFOLIO.secondaryEmail){
   email.append(glyph,address);primaryEmail.after(email);
 }
 const contactArtwork=document.querySelector('.contact-decoration');
-document.querySelector('.contact-details').prepend(contactArtwork);
-const contactForm=document.querySelector('#contact-form');
+document.querySelector('#contact > div:first-child').insertBefore(contactArtwork,document.querySelector('.report-playground'));
+
 const contactIntro=document.querySelector('#contact > div:first-child > .body-copy');
 contactIntro.classList.add('contact-intro');
-contactForm.prepend(contactIntro);
+
 const contactLabel=document.createElement('div');
 contactLabel.className='contact-side-label';
 contactLabel.setAttribute('aria-hidden','true');
 contactLabel.innerHTML='<span>CONTACT</span>';
 document.querySelector('#contact').append(contactLabel);
-document.querySelector('#message').rows=4;
+
 const footer=document.querySelector('footer .wrap');
 footer.querySelector('a').remove();
 const footerLinks=document.createElement('div');footerLinks.className='footer-nav';footerLinks.setAttribute('role','navigation');footerLinks.setAttribute('aria-label','Footer navigation');
@@ -52,3 +52,9 @@ document.body.append(topButton);
 const setTopVisibility=()=>{const visible=window.scrollY>300;topButton.classList.toggle('visible',visible);topButton.tabIndex=visible?0:-1;topButton.setAttribute('aria-hidden',String(!visible));};
 window.addEventListener('scroll',setTopVisibility,{passive:true});setTopVisibility();
 topButton.addEventListener('click',()=>window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));
+
+const footerName=document.querySelector('footer [data-name]');
+if(footerName){const profile=document.createElement('a');profile.href='https://github.com/tanvirbadhon';profile.target='_blank';profile.rel='noopener noreferrer';profile.className='footer-profile';profile.textContent=footerName.textContent;footerName.replaceChildren(profile);}
+
+// Keep reports after contact details on phones, in the left column on desktop.
+(()=>{const report=document.querySelector('.report-playground');const intro=document.querySelector('#contact>div:first-child');const details=document.querySelector('.contact-details');if(!report||!intro||!details)return;const phone=matchMedia('(max-width:720px)');const arrange=()=>{(phone.matches?details:intro).append(report);const button=report.querySelector('.report-runaway');if(button){button.style.left='0px';button.style.top='0px';}};phone.addEventListener('change',arrange);arrange();})();

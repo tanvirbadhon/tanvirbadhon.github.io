@@ -47,3 +47,184 @@ footer{font-size:14px;line-height:20px;padding:32px 0}.footer-nav{gap:24px}.foot
   #skills-list{margin:48px 0}
 }
 .projects-heading h2{line-height:1.25;padding-bottom:.12em;overflow:visible}
+
+/* Simple contact paragraph and playful report area. */
+#contact .contact-intro{margin:20px 0 28px;max-width:700px;font-size:17px;line-height:1.8}.report-playground{margin-top:35px;border-top:1px solid #34304f;padding-top:22px}.report-playground>p{font-size:14px;color:var(--muted);margin:0 0 16px}.report-arena{position:relative;width:100%;height:160px;overflow:hidden}.report-runaway{position:absolute;left:0;top:0;white-space:nowrap;transition:none!important;font-size:12px;padding:10px 18px}.report-runaway:hover{transform:none;box-shadow:0 0 18px #ec489930}@media(max-width:720px){#contact .contact-intro{font-size:15px}.report-arena{height:140px}}
+/* Balanced contact columns: introduction/art on the left, details on the right. */
+#contact.contact{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:72px}#contact>div:first-child{min-width:0}#contact .contact-details{width:100%;padding:0;align-self:center}#contact .contact-decoration.reference-animation{width:210px;height:210px;max-width:100%;margin:20px auto 24px}#contact .contact-line{margin-bottom:30px}#contact .report-playground{margin-top:20px;padding-top:20px}#contact .report-arena{height:100px}#contact .availability{margin-top:12px}@media(max-width:720px){#contact.contact{grid-template-columns:1fr;gap:30px}#contact .contact-decoration.reference-animation{width:180px;height:180px}#contact .contact-details{padding:0}#contact .contact-line{margin-bottom:24px}}
+
+.report-countdown{display:inline-block;margin-top:6px;color:var(--pink);font-size:13px}
+
+/* Visitor-selectable light palette, preserving the terminal's dark contrast. */
+.theme-toggle{position:fixed;right:24px;bottom:104px;z-index:40;border:1px solid var(--border);border-radius:24px;padding:9px 16px;background:var(--panel);color:var(--text);font-size:12px;box-shadow:0 4px 18px #0002}.theme-toggle:hover{border-color:var(--mint)}
+html[data-theme="light"]{color-scheme:light;--bg:#f5f7fc;--panel:#ffffff;--text:#19223b;--muted:#526078;--border:#d5dcec;--mint:#087e64;--pink:#b82c7b;--purple:#7346c5}
+html[data-theme="light"] body{background:var(--bg);color:var(--text)}
+html[data-theme="light"] .hero-copy>p,html[data-theme="light"] .body-copy,html[data-theme="light"] .contact-line,html[data-theme="light"] .availability,html[data-theme="light"] footer,html[data-theme="light"] .project-body>p,html[data-theme="light"] .timeline-card p{color:#526078}
+html[data-theme="light"] .section-title>span{background:#eeeafa;color:#202c46;border-color:var(--mint)}
+html[data-theme="light"] .timeline-card,html[data-theme="light"] .project,html[data-theme="light"] .skill,html[data-theme="light"] .portrait{background:#fff;color:var(--text);border-color:#d5dcec}
+html[data-theme="light"] .timeline-card,html[data-theme="light"] .project-bar,html[data-theme="light"] .project-body{background-image:linear-gradient(120deg,#fff,#f0edfb)}
+html[data-theme="light"] .skill span,html[data-theme="light"] .project h3,html[data-theme="light"] .timeline-card h3{color:#19223b}
+html[data-theme="light"] .tags span,html[data-theme="light"] .skill b{background:#eeebf7;border-color:#d5cceb}
+html[data-theme="light"] .contact-side-label>span{background:#eeebf7;color:#202c46;border-color:var(--mint)}
+html[data-theme="light"] .contact-line>span:first-child{background:#d4f3e8;color:#087e64}
+html[data-theme="light"] .report-playground,html[data-theme="light"] footer{border-color:#d5dcec}
+html[data-theme="light"] dialog{background:#fff;color:#19223b;border-color:#d5dcec}
+html[data-theme="light"] .dialog-close{color:#19223b}
+html[data-theme="light"] .code-window{--text:#f4f5fa;--mint:#16f2b3;--pink:#ec4899;color:#f4f5fa;background:linear-gradient(110deg,#0b1026,#0b0b33)}
+html[data-theme="light"] .button.outline{color:#263651}
+html[data-theme="light"] .back-to-top,html[data-theme="light"] .button.filled{color:#fff}
+@media(max-width:720px){.theme-toggle{right:17px;bottom:82px;padding:8px 12px;font-size:11px}html[data-theme="light"] #navigation{background:#fff;border-color:#d5dcec}}
+html[data-theme="light"] .socials a{color:#304360}html[data-theme="light"] .socials a:hover{color:var(--pink)}html[data-theme="light"] .placeholder-note{color:#63718a}html[data-theme="light"] .project-action{color:#087e64}
+/* Complete light theme: warm ivory, midnight navy and brushed gold. */
+html[data-theme="light"]{--bg:#f6f3ec;--panel:#fffdf8;--text:#202d40;--muted:#636a70;--border:#ded7c8;--mint:#38635d;--pink:#946b31;--purple:#596c88;color-scheme:light}
+html[data-theme="light"] body{background:#f6f3ec;color:#202d40;scrollbar-color:#a98b5b #ede8dd}
+html[data-theme="light"] .ambient{background:radial-gradient(ellipse,#c9b68d22,transparent 65%)}
+html[data-theme="light"] .hero:before,html[data-theme="light"] .section:before{background-image:none;background-color:transparent}
+html[data-theme="light"] .hero:after{opacity:.08;filter:grayscale(1)}
+html[data-theme="light"] .brand{background:linear-gradient(100deg,#20334c,#62728b);background-clip:text;color:transparent}
+html[data-theme="light"] .hero h1 .pink{color:#946b31}
+html[data-theme="light"] .hero h1 .mint{color:#38635d}
+html[data-theme="light"] .hero-copy>p,html[data-theme="light"] .body-copy,html[data-theme="light"] .contact-line,html[data-theme="light"] .availability,html[data-theme="light"] .placeholder-note,html[data-theme="light"] .projects-heading>p:last-child{color:#636a70}
+html[data-theme="light"] #navigation a{color:#26374d}html[data-theme="light"] #navigation a:hover,html[data-theme="light"] #navigation a.active{color:#946b31}
+html[data-theme="light"] .socials a{color:#34465b}html[data-theme="light"] .socials a:hover{color:#946b31}
+html[data-theme="light"] .filled,html[data-theme="light"] .back-to-top{background:linear-gradient(115deg,#22364f,#405773);color:#fff}
+html[data-theme="light"] .filled:hover{background:linear-gradient(115deg,#405773,#22364f);box-shadow:0 7px 24px #22364f20}
+html[data-theme="light"] .outline{background:#fffdf8;border-color:#a88a57;color:#35465a;box-shadow:none}
+html[data-theme="light"] .outline:hover{background:#ece6d8;box-shadow:0 5px 18px #a88a571c}
+html[data-theme="light"] .code-window{background:#172436;box-shadow:0 12px 40px #22364f14;border-color:#30435b}
+html[data-theme="light"] .code-window .window-bar{background:#1f3045;border-color:#3c4c61}
+html[data-theme="light"] .code-window .pink{color:#dfb678}html[data-theme="light"] .code-window .mint{color:#88c7af}html[data-theme="light"] .code-window .yellow{color:#e4d2a6}html[data-theme="light"] .code-window .orange{color:#e3ad83}html[data-theme="light"] .code-window .cyan{color:#9bbcd5}
+html[data-theme="light"] .section:before{background:linear-gradient(90deg,transparent,#ded7c8,transparent)}
+html[data-theme="light"] .section-title>span{background:#eee8db;border:1px solid #b49a6d;color:#26374d}
+html[data-theme="light"] .section-title:before,html[data-theme="light"] .section-title:after{background:#b49a6d}
+html[data-theme="light"] .timeline-card,html[data-theme="light"] .project,html[data-theme="light"] .skill{background:#fffdf8;border-color:#ded7c8;box-shadow:0 8px 30px #26374d06}
+html[data-theme="light"] .timeline-card{background-image:linear-gradient(115deg,#fffdf8,#f1ede3)}
+html[data-theme="light"] .timeline-card:before,html[data-theme="light"] .project:before{background:linear-gradient(120deg,#af9560,#5d7385);opacity:0}
+html[data-theme="light"] .timeline-card:hover,html[data-theme="light"] .project:hover{border-color:#b49a6d;box-shadow:0 12px 35px #26374d12}
+html[data-theme="light"] .project:hover:before,html[data-theme="light"] .timeline-card:hover:before{opacity:.14}
+html[data-theme="light"] .project:after{background:linear-gradient(90deg,#22364f,#b49a6d)}
+html[data-theme="light"] .project-bar{background:#f4f0e7;border-radius:19px 19px 0 0}
+html[data-theme="light"] .project-body{background:#fffdf8;border-radius:0 0 19px 19px}
+html[data-theme="light"] .project h3,html[data-theme="light"] .project:hover h3,html[data-theme="light"] .timeline-card h3{color:#26374d;background:none}
+html[data-theme="light"] .project-code-icon{background:#e8edf0;border-color:#cbd4db;color:#405773}
+html[data-theme="light"] .project:hover .project-code-icon{background:#e4e9ec;box-shadow:0 0 18px #40577315}
+html[data-theme="light"] .project-date{color:#6b7379!important}
+html[data-theme="light"] .project-number,html[data-theme="light"] .tech-label{color:#6b7379}
+html[data-theme="light"] .project-number:before{background:#a88a57}
+html[data-theme="light"] .project-date svg,html[data-theme="light"] .tech-label svg,html[data-theme="light"] .tags svg,html[data-theme="light"] .timeline-icon{color:#8b7043}
+html[data-theme="light"] .tags span{background:#f2eee4;border-color:#ded4bf;color:#56616b}
+html[data-theme="light"] .project-role{background:#e9eee9;border-color:#d1dbd0;color:#3f6253}
+html[data-theme="light"] .project-action{background:#263c56;border-color:#263c56;color:#fff}
+html[data-theme="light"] .project-action:hover{background:#405773;border-color:#405773}
+html[data-theme="light"] .project-footer{border-color:#e1dacc}
+html[data-theme="light"] .projects-heading h2{background:linear-gradient(100deg,#22364f,#997b48,#22364f);background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+html[data-theme="light"] .skill b{background:transparent}
+html[data-theme="light"] .skill:hover{border-color:#b49a6d;box-shadow:0 10px 22px #26374d12}
+html[data-theme="light"] .side-label,html[data-theme="light"] .contact-side-label>span{background:#ece6d8;color:#35465a;border-color:#b49a6d}
+html[data-theme="light"] .contact-side-label:after{background:#b49a6d}
+html[data-theme="light"] .contact-line>span:first-child{background:#e6ebdf;color:#46624f}
+html[data-theme="light"] .contact-line:hover{color:#946b31}
+html[data-theme="light"] .availability i{background:#567d66;box-shadow:none}
+html[data-theme="light"] .report-countdown{color:#946b31}
+html[data-theme="light"] footer{background:#ebe6db;color:#58616a;border-color:#d7cebb}
+html[data-theme="light"] footer .footer-nav a{color:#35465a}html[data-theme="light"] footer .footer-nav a:hover{color:#946b31}
+html[data-theme="light"] footer [data-name]{color:#7f653d}
+html[data-theme="light"] .theme-toggle{background:#fffdf8;border-color:#d1c5ac;color:#35465a;box-shadow:0 4px 18px #26374d12}
+html[data-theme="light"] dialog{background:#fffdf8;border-color:#ded7c8}html[data-theme="light"] dialog p{color:#636a70}
+html[data-theme="light"] body::-webkit-scrollbar-track{background:#ede8dd}html[data-theme="light"] body::-webkit-scrollbar-thumb{background:#a98b5b}
+/* Stronger light-theme readability and clearly framed report controls. */
+html[data-theme="light"]{--muted:#49535f}
+html[data-theme="light"] .hero-copy>p,html[data-theme="light"] .body-copy,html[data-theme="light"] .contact-line,html[data-theme="light"] .availability,html[data-theme="light"] .placeholder-note,html[data-theme="light"] .projects-heading>p:last-child,html[data-theme="light"] .project-body>p,html[data-theme="light"] .timeline-card p{color:#49535f}
+html[data-theme="light"] #contact .contact-intro{color:#424e5b}
+html[data-theme="light"] .contact-line>span:first-child{background:#2e524b;color:#fff;border:1px solid #24463f;box-shadow:0 3px 10px #24463f15}
+html[data-theme="light"] .contact-line svg{stroke-width:2.2}
+html[data-theme="light"] .socials a,html[data-theme="light"] .project-code-icon{color:#223b55}
+html[data-theme="light"] .timeline-icon,html[data-theme="light"] .project-date svg,html[data-theme="light"] .tech-label svg,html[data-theme="light"] .tags svg{color:#785420}
+html[data-theme="light"] .project-date,html[data-theme="light"] .project-number,html[data-theme="light"] .tech-label{color:#515c68!important}
+html[data-theme="light"] .tags span{color:#35414e;border-color:#c6bba5}
+html[data-theme="light"] .availability i{background:#2e6552}
+html[data-theme="light"] #contact .report-playground{border:1px solid #b7a786;border-radius:14px;background:#fffdf8;padding:22px 24px 12px;box-shadow:0 5px 20px #26374d08}
+html[data-theme="light"] .report-playground>p{font-size:15px;font-weight:600;color:#26374d}
+html[data-theme="light"] .report-countdown{color:#80581f;font-weight:500;font-size:13px}
+html[data-theme="light"] .report-runaway{background:#263c56;border:2px solid #263c56;color:#fff;font-weight:650;box-shadow:0 4px 12px #263c5620}
+html[data-theme="light"] .report-runaway:hover{background:#38536f;border-color:#38536f;color:#fff}
+@media(max-width:720px){html[data-theme="light"] #contact .report-playground{padding:18px 16px 10px}}
+
+html[data-theme="light"] #contact .report-runaway{color:#fff;background:#263c56;border-color:#263c56}
+
+/* Transparent report panel and light-theme project motion. */
+html[data-theme="light"] #contact .report-playground{background:transparent;box-shadow:none}
+html[data-theme="light"] .projects-heading h2{background-image:linear-gradient(100deg,#22364f 0%,#8b6835 25%,#38635d 50%,#a27a3e 75%,#22364f 100%);background-size:300% 100%;background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:light-project-shimmer 8s ease-in-out infinite}
+.project-code-icon{transition:transform .45s ease,box-shadow .35s,background .35s,border-color .35s}.project-code-icon svg{transition:transform .45s ease}
+.project:hover .project-code-icon,.project:focus-within .project-code-icon{transform:translateY(-4px) rotate(-6deg)}
+.project:hover .project-code-icon svg,.project:focus-within .project-code-icon svg{transform:scale(1.14) rotate(6deg)}
+html[data-theme="light"] .project:hover .project-code-icon,html[data-theme="light"] .project:focus-within .project-code-icon{background:#e7dcc6;border-color:#a88a57;color:#263c56;box-shadow:0 7px 18px #8b683525}
+@keyframes light-project-shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@media(prefers-reduced-motion:reduce){html[data-theme="light"] .projects-heading h2{animation:none}.project:hover .project-code-icon,.project:focus-within .project-code-icon,.project:hover .project-code-icon svg,.project:focus-within .project-code-icon svg{transform:none}}
+/* Light theme changes color only; retain the shared report layout. */
+html[data-theme="light"] #contact .report-playground{border:0;border-top:1px solid #b7a786;border-radius:0;background:transparent;box-shadow:none;padding:20px 0 0}
+html[data-theme="light"] .report-playground>p{font-size:14px;font-weight:400;margin:0 0 16px}
+html[data-theme="light"] #experience,html[data-theme="light"] #education{background-image:radial-gradient(ellipse at 65% 0%,#c8b58a22,transparent 55%),linear-gradient(#a98b5b0c 1px,transparent 1px),linear-gradient(90deg,#a98b5b0c 1px,transparent 1px);background-size:100% 100%,80px 80px,80px 80px;background-position:top center;background-repeat:no-repeat,repeat,repeat}
+html[data-theme="light"] #projects:after{background:radial-gradient(ellipse at 20% 30%,#a98b5b0b,transparent 45%),radial-gradient(ellipse at 80% 70%,#526b740b,transparent 45%)}
+html[data-theme="light"] .glow-surface:after{background:conic-gradient(from var(--glow-angle),transparent 0deg,#a98b5b 35deg,#536c79 65deg,#fffdf8 85deg,transparent 110deg);filter:drop-shadow(0 0 5px #a98b5b50)}
+html[data-theme="light"] .project:before,html[data-theme="light"] .timeline-card:before{box-shadow:-7px -5px 18px #a98b5b30,0 8px 22px #536c7920}
+html[data-theme="light"] .motion-toggle{background:#eee8db;border-color:#b7a786;color:#35465a}
+html[data-theme="light"] .section-title>span{border-color:#171717}html[data-theme="light"] .section-title:before,html[data-theme="light"] .section-title:after{background:#171717}
+/* Keep skill names intact and reserve space for the floating footer arrow. */
+.skill-group .skill .single-line-skill{white-space:nowrap;overflow-wrap:normal;word-break:normal;font-size:15px}
+footer .footer-nav{margin-right:64px}
+@media(max-width:720px){.skill-group .skill .single-line-skill{font-size:12px}footer .footer-nav{margin-right:40px}}
+/* Clear switch outline and an icon-only phone control. */
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1.5px solid #8c86aa;min-height:44px}.theme-symbol{font-size:19px;line-height:1}.theme-label{line-height:20px}html[data-theme="light"] .theme-toggle{border-color:#8c7854}
+@media(max-width:720px){.theme-toggle{width:46px;height:46px;min-height:46px;padding:0;right:17px;bottom:82px;border-radius:50%;gap:0}.theme-toggle .theme-label{display:none}.theme-toggle .theme-symbol{font-size:25px}.report-runaway{min-height:44px}.contact-line{min-height:44px}footer .footer-nav{margin-right:0;padding-right:54px}footer .footer-nav a{padding:7px 0}.contact-side-label{display:none}}
+@media(max-width:720px){body{overflow-x:clip}.ambient{max-width:100%;left:0}header .brand{font-size:clamp(25px,7.5vw,32px)}header.wrap{gap:12px}.menu-toggle{min-width:44px;min-height:44px;flex-shrink:0}#navigation a{min-height:44px;display:flex;align-items:center}}
+@media(max-width:720px){footer .wrap{padding-right:84px}footer .wrap>span{white-space:normal;overflow-wrap:normal}footer .footer-nav{padding-right:0}}
+/* Legible navigation, compact branding, and stable marquee compositing. */
+header .brand{font-size:36px;line-height:1.2}
+html[data-theme="light"] #navigation a,html[data-theme="light"] #navigation a:hover,html[data-theme="light"] #navigation a.active,html[data-theme="light"] footer,html[data-theme="light"] footer .footer-nav a,html[data-theme="light"] footer .footer-nav a:hover{color:#000}
+footer .footer-profile{font:inherit;letter-spacing:inherit;color:inherit}footer .footer-profile:hover{text-decoration:underline;text-underline-offset:4px}
+#skills-list.skills-grid{mask-image:none;-webkit-mask-image:none;isolation:isolate}
+#skills-list.skills-grid:before,#skills-list.skills-grid:after{content:'';position:absolute;top:0;bottom:0;width:24px;z-index:3;pointer-events:none}
+#skills-list.skills-grid:before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}#skills-list.skills-grid:after{right:0;background:linear-gradient(270deg,var(--bg),transparent)}
+.skill-track{will-change:transform;backface-visibility:hidden;transform:translate3d(0,0,0)}.skill-group{backface-visibility:hidden}.skill-group .skill{isolation:isolate;backface-visibility:hidden;flex-shrink:0;min-height:150px}.skill-group .skill span{word-break:normal;overflow-wrap:normal}
+@keyframes skills-scroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@media(max-width:720px){header .brand{font-size:clamp(24px,7vw,29px)}.skill-group .skill{min-height:140px}}
+@media(max-width:720px){.back-to-top{width:46px;height:46px;right:17px}.back-to-top svg{width:24px;height:24px}}
+/* Stronger copy contrast and a more visible playful Report control. */
+html[data-theme="light"] #about .body-copy,html[data-theme="light"] #contact .contact-intro,html[data-theme="light"] #contact .contact-line,html[data-theme="light"] #contact .availability{color:#263445;opacity:1}
+html:not([data-theme="light"]) #about .body-copy,html:not([data-theme="light"]) #contact .contact-intro,html:not([data-theme="light"]) #contact .contact-line{color:#e4e8f1;opacity:1}
+#contact .report-runaway{font-weight:700;border:2px solid #bc75ee;background:linear-gradient(115deg,#5827a0,#a52f79);color:#fff;box-shadow:0 4px 18px #a52f7938}
+#contact .report-runaway:hover{color:#fff;box-shadow:0 0 0 3px #c66ff120,0 5px 22px #a52f7945}
+html[data-theme="light"] #contact .report-runaway{background:linear-gradient(115deg,#213951,#405c73);border:2px solid #9a793e;color:#fff;box-shadow:0 4px 16px #243b5326}
+header .brand.brand-yaku{position:relative;display:inline-block;overflow:hidden;padding:6px 0 8px;line-height:1.2;background:none;color:#8e76d6;-webkit-text-fill-color:currentColor;vertical-align:middle}
+.brand-yaku:before{content:'';position:absolute;inset:0;border-top:1px solid currentColor;border-bottom:1px solid currentColor;transform:translateX(-102%);transition:transform .5s;pointer-events:none}
+.brand-word{display:inline-block;white-space:nowrap}.brand-letter{display:inline-block;transform:perspective(1000px) rotateY(0);transition:transform .5s,color .5s;transition-delay:calc((11 - var(--letter)) * .035s)}
+.brand-yaku:hover:before,.brand-yaku:focus-visible:before{transform:translateX(0)}
+.brand-yaku:hover .brand-letter,.brand-yaku:focus-visible .brand-letter{transform:perspective(1000px) rotateY(360deg);color:#e57ebd;transition-delay:calc(var(--letter) * .04s)}
+html[data-theme="light"] header .brand.brand-yaku{color:#354b64}html[data-theme="light"] .brand-yaku:hover .brand-letter,html[data-theme="light"] .brand-yaku:focus-visible .brand-letter{color:#8b6835}
+@media(prefers-reduced-motion:reduce){.brand-yaku:before,.brand-letter{transition:none!important;transform:none!important}.brand-yaku:before{opacity:0}.brand-yaku:hover:before,.brand-yaku:focus-visible:before{opacity:1}}
+/* More breathing room for the smaller phone Report button. */
+@media(max-width:720px){#contact .report-runaway{font-size:11px;line-height:16px;padding:9px 14px;min-height:40px;border-radius:22px;letter-spacing:.2px}#contact .report-arena{height:150px;margin-top:6px}#contact .report-playground>p{margin-bottom:12px}#contact.contact{row-gap:32px}}
+/* Keep the wordmark clearly readable over the dark hero glow. */
+html:not([data-theme="light"]) header .brand.brand-yaku{color:#f3f5ff}
+html:not([data-theme="light"]) .brand-yaku:hover .brand-letter,html:not([data-theme="light"]) .brand-yaku:focus-visible .brand-letter{color:#8ff5e0}
+/* Bright gradient wordmark without losing the letter-flip hover. */
+html:not([data-theme="light"]) header .brand.brand-yaku{color:#8edffc}
+html:not([data-theme="light"]) .brand-yaku .brand-letter{background:linear-gradient(115deg,#65f4ed,#b7c5ff 55%,#e6a8ff);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+html:not([data-theme="light"]) .brand-yaku:hover .brand-letter,html:not([data-theme="light"]) .brand-yaku:focus-visible .brand-letter{background-image:linear-gradient(115deg,#a5ffe1,#79e6ff 55%,#d5b0ff);color:transparent}
+/* Warm sunset wordmark against the cool dark background. */
+html:not([data-theme="light"]) header .brand.brand-yaku{color:#ffc38c}
+html:not([data-theme="light"]) .brand-yaku .brand-letter{background-image:linear-gradient(115deg,#ff8fa8 0%,#ffbd95 50%,#ffe28a 100%)}
+html:not([data-theme="light"]) .brand-yaku:hover .brand-letter,html:not([data-theme="light"]) .brand-yaku:focus-visible .brand-letter{background-image:linear-gradient(115deg,#ffe28a 0%,#ffc6a4 50%,#ffa4bc 100%)}
+/* Cyan-to-purple at rest, bright mint during the Yaku hover. */
+html:not([data-theme="light"]) .brand-yaku .brand-letter{background:none;color:#a45cf2;-webkit-text-fill-color:currentColor}
+html:not([data-theme="light"]) .brand-yaku .brand-word:first-child .brand-letter{color:#27c9df}
+html:not([data-theme="light"]) .brand-yaku .brand-word:first-child .brand-letter:nth-child(n+4){color:#4fa7ee}
+html:not([data-theme="light"]) .brand-yaku .brand-word:last-child .brand-letter:nth-child(-n+3){color:#7984f4}
+html:not([data-theme="light"]) .brand-yaku:hover .brand-letter,html:not([data-theme="light"]) .brand-yaku:focus-visible .brand-letter{background:none;color:#16f2b3;-webkit-text-fill-color:#16f2b3}
+html:not([data-theme="light"]) header .brand.brand-yaku{color:#16f2b3}
+html:not([data-theme="light"]) .brand-yaku .brand-word .brand-letter{color:color-mix(in srgb,#27c9df calc(100% - var(--letter) * 9.09%),#a45cf2)}
+html:not([data-theme="light"]) .brand-yaku:hover .brand-word .brand-letter,html:not([data-theme="light"]) .brand-yaku:focus-visible .brand-word .brand-letter{color:#16f2b3}
+/* One continuous gradient, shared across all independently animated letters. */
+html:not([data-theme="light"]) .brand-yaku .brand-word .brand-letter{background-image:linear-gradient(100deg,#22c9dc 0%,#529eeb 45%,#a653f0 100%);background-size:var(--brand-gradient-width,300px) 100%;background-position:calc(0px - var(--brand-gradient-offset,0px)) 0;background-repeat:no-repeat;background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+html:not([data-theme="light"]) .brand-yaku:hover .brand-word .brand-letter,html:not([data-theme="light"]) .brand-yaku:focus-visible .brand-word .brand-letter{background:none;color:#16f2b3;-webkit-text-fill-color:#16f2b3}
