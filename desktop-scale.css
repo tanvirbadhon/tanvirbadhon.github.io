@@ -204,7 +204,7 @@ header .brand.brand-yaku{position:relative;display:inline-block;overflow:hidden;
 html[data-theme="light"] header .brand.brand-yaku{color:#354b64}html[data-theme="light"] .brand-yaku:hover .brand-letter,html[data-theme="light"] .brand-yaku:focus-visible .brand-letter{color:#8b6835}
 @media(prefers-reduced-motion:reduce){.brand-yaku:before,.brand-letter{transition:none!important;transform:none!important}.brand-yaku:before{opacity:0}.brand-yaku:hover:before,.brand-yaku:focus-visible:before{opacity:1}}
 /* More breathing room for the smaller phone Report button. */
-@media(max-width:720px){#contact .report-runaway{font-size:11px;line-height:16px;padding:9px 14px;min-height:40px;border-radius:22px;letter-spacing:.2px}#contact .report-arena{height:150px;margin-top:6px}#contact .report-playground>p{margin-bottom:12px}#contact.contact{row-gap:32px}}
+@media(max-width:720px){#contact .report-runaway{font-size:11px;line-height:16px;padding:9px 14px;min-height:40px;border-radius:22px;letter-spacing:.2px}#contact .report-arena{height:100px;margin-top:6px}#contact .report-playground>p{margin-bottom:12px}#contact.contact{row-gap:32px;padding-bottom:32px}}
 /* Keep the wordmark clearly readable over the dark hero glow. */
 html:not([data-theme="light"]) header .brand.brand-yaku{color:#f3f5ff}
 html:not([data-theme="light"]) .brand-yaku:hover .brand-letter,html:not([data-theme="light"]) .brand-yaku:focus-visible .brand-letter{color:#8ff5e0}
