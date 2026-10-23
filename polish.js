@@ -20,7 +20,7 @@ document.querySelectorAll('.project').forEach((card,index)=>{
     if(source){const img=document.createElement('img');img.src=source;img.alt='';img.width=16;img.height=16;tag.prepend(img);}else tag.insertAdjacentHTML('afterbegin',sparkIcon);
   });
   const action=card.querySelector('.project-action');
-  if(action){action.textContent=index===3?'Coming Soon':'Code';action.insertAdjacentHTML('beforeend',externalIcon);const foot=document.createElement('div');foot.className='project-footer';const badge=document.createElement('span');badge.className='project-role';badge.textContent=window.PORTFOLIO.projects[index].stack[0];foot.append(badge,action);body.append(foot);}
+  if(action){action.textContent=window.PORTFOLIO.projects[index].linkLabel||'Code';action.insertAdjacentHTML('beforeend',externalIcon);const foot=document.createElement('div');foot.className='project-footer';const badge=document.createElement('span');badge.className='project-role';badge.textContent=window.PORTFOLIO.projects[index].stack[0];foot.append(badge,action);body.append(foot);}
 });
 const primaryEmail=document.querySelector('#contact-email');
 primaryEmail.firstElementChild.innerHTML=atIcon;
