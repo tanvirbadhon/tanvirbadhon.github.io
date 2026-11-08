@@ -16,7 +16,8 @@ window.PORTFOLIO = {
     facebook: 'https://www.facebook.com/tanvirbadhon10/',
     instagram: 'https://www.instagram.com/tanvir_badhon_10/',
     scholar: 'https://scholar.google.com/citations?user=g2oTUygAAAAJ&hl=en',
-    orcid: 'https://orcid.org/0009-0002-4175-9067'
+    orcid: 'https://orcid.org/0009-0002-4175-9067',
+    researchgate: 'https://www.researchgate.net/profile/Tanvir-Badhon'
   },
   experience: [
     { date: 'Upcoming', title: 'My professional journey starts here', organization: 'Future experience, internships, and opportunities will appear here.' }

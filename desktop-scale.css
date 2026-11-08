@@ -15,7 +15,8 @@ header.wrap{height:96px}header .brand{font-size:42px;line-height:46px;font-weigh
 .hero{min-height:0;grid-template-columns:1fr;gap:32px;padding:16px 0}
 .hero-copy{padding:8px 8px 40px}.hero h1{font-size:30px;line-height:40px;margin:0;letter-spacing:0}
 .hero-copy>p{font-size:14px;line-height:20px;margin:24px 0 0;max-width:672px}
-.socials{gap:24px;margin:32px 0}.socials svg{width:30px;height:30px}
+.socials{gap:24px;margin:32px 0;flex-wrap:wrap}.socials svg{width:30px;height:30px}
+@media(max-width:720px){.socials{gap:14px}}
 .hero .actions{gap:12px}.hero .button{font-size:12px;line-height:16px;padding:12px 20px;border-radius:999px}
 .code-window pre{font-size:12px;line-height:16px;padding:24px;letter-spacing:0}.window-bar{padding:16px 24px;gap:8px}.window-bar i{width:12px;height:12px}
 .section{padding:48px 0}.section-title{margin:0 0 32px}.section-title>span{font-size:20px;line-height:28px;padding:8px 20px}.section-title:before,.section-title:after{width:96px;height:2px}
